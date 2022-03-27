@@ -160,11 +160,21 @@ function new(verification, key, info)
 
 			UIPadding.Parent = Button
 			UIPadding.PaddingLeft = UDim.new(0, 13)
+			Button.MouseEnter:Connect(function()
+				game.TweenService:Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				}):Play()
+			end)
+			Button.MouseLeave:Connect(function()
+				game.TweenService:Create(Button, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				}):Play()
+			end)
 			Button.MouseButton1Down:Connect(function()
-				Button.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				Button.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 				spawn(callback)
 				wait()
-				Button.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				Button.BackgroundColor3 = Color3.fromRGB(57, 57, 57)
 			end)
 		end
 		function tab_stuff.toggle(key, state, callback)
@@ -175,7 +185,8 @@ function new(verification, key, info)
 			local UICorner = Instance.new("UICorner")
 			local Check = Instance.new("ImageButton")
 			local UIListLayout_2 = Instance.new("UIListLayout")
-
+			local toggled = false
+			
 			--Properties:
 
 			Toggle.Name = "Toggle"
@@ -189,7 +200,26 @@ function new(verification, key, info)
 			Toggle.TextColor3 = Color3.fromRGB(168, 168, 168)
 			Toggle.TextSize = 11.000
 			Toggle.TextXAlignment = Enum.TextXAlignment.Left
-
+			Toggle.MouseEnter:Connect(function()
+				game.TweenService:Create(Toggle, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				}):Play()
+				if toggled == false then
+				game.TweenService:Create(CheckBox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+				}):Play()
+				end
+			end)
+			Toggle.MouseLeave:Connect(function()
+				game.TweenService:Create(Toggle, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				}):Play()
+				if toggled == false then
+					game.TweenService:Create(CheckBox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+						BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+					}):Play()
+				end
+			end)
 			UIPadding.Parent = Toggle
 			UIPadding.PaddingLeft = UDim.new(0, 13)
 			UIPadding.PaddingRight = UDim.new(0, 7)
@@ -223,7 +253,6 @@ function new(verification, key, info)
 			UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
-			local toggled = false
 			local function clicked()
 				if toggled then
 					game.TweenService:Create(Check, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -290,7 +319,22 @@ function new(verification, key, info)
 			SlidingFrame.BorderSizePixel = 0
 			SlidingFrame.Size = UDim2.new(0, 82, 0, 30)
 			SlidingFrame.BorderSizePixel = 0
-
+			Slider.MouseEnter:Connect(function()
+				game.TweenService:Create(Slider, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				}):Play()
+				game.TweenService:Create(SlidingFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+				}):Play()
+			end)
+			Slider.MouseLeave:Connect(function()
+				game.TweenService:Create(Slider, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				}):Play()
+				game.TweenService:Create(SlidingFrame, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(41, 41, 41)
+				}):Play()
+			end)
 			local slider = framework.sizeslider(Slider, SlidingFrame, min, max, 0.05)
 			slider:set(default)
 
@@ -323,7 +367,16 @@ function new(verification, key, info)
 			Keybind.TextColor3 = Color3.fromRGB(168, 168, 168)
 			Keybind.TextSize = 11.000
 			Keybind.TextXAlignment = Enum.TextXAlignment.Left
-
+			Keybind.MouseEnter:Connect(function()
+				game.TweenService:Create(Keybind, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				}):Play()
+			end)
+			Keybind.MouseLeave:Connect(function()
+				game.TweenService:Create(Keybind, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				}):Play()
+			end)
 			UIPadding.Parent = Keybind
 			UIPadding.PaddingLeft = UDim.new(0, 13)
 			UIPadding.PaddingRight = UDim.new(0, 10)
@@ -391,7 +444,16 @@ function new(verification, key, info)
 			Dropdown.TextColor3 = Color3.fromRGB(168, 168, 168)
 			Dropdown.TextSize = 11.000
 			Dropdown.TextXAlignment = Enum.TextXAlignment.Left
-
+			Dropdown.MouseEnter:Connect(function()
+				game.TweenService:Create(Dropdown, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(57, 57, 57)
+				}):Play()
+			end)
+			Dropdown.MouseLeave:Connect(function()
+				game.TweenService:Create(Dropdown, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+					BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+				}):Play()
+			end)
 			UIPadding.Parent = Dropdown
 			UIPadding.PaddingLeft = UDim.new(0, 13)
 			UIPadding.PaddingRight = UDim.new(0, 7)
