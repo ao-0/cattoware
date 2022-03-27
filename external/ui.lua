@@ -107,11 +107,7 @@ function new(verification, key, info)
 
 		UIListLayout_3.Parent = Tab
 		UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-		UIListLayout_3.Padding = UDim.new(0, 3)
-
-		UIPadding_4.Parent = Tab
-		UIPadding_4.PaddingLeft = UDim.new(0, 3)
-		UIPadding_4.PaddingTop = UDim.new(0, 3)
+		UIListLayout_3.Padding = UDim.new(0, 0)
 		TabButton.MouseButton1Down:Connect(function()
 			for i,v in pairs(TabFolder:GetChildren()) do
 				v.Visible = false
@@ -154,7 +150,7 @@ function new(verification, key, info)
 			Button.Parent = Tab
 			Button.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 			Button.BorderSizePixel = 0
-			Button.Size = UDim2.new(0, 302, 0, 30)
+			Button.Size = UDim2.new(1, 0, 0, 30)
 			Button.AutoButtonColor = false
 			Button.Font = Enum.Font.Arial
 			Button.Text = key
@@ -186,7 +182,7 @@ function new(verification, key, info)
 			Toggle.Parent = Tab
 			Toggle.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 			Toggle.BorderSizePixel = 0
-			Toggle.Size = UDim2.new(0, 302, 0, 30)
+			Toggle.Size = UDim2.new(1, 0, 0, 30)
 			Toggle.AutoButtonColor = false
 			Toggle.Font = Enum.Font.Arial
 			Toggle.Text = key
@@ -241,7 +237,7 @@ function new(verification, key, info)
 						ImageTransparency = 0
 					}):Play()
 					game.TweenService:Create(CheckBox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-						BackgroundColor3 = Color3.fromRGB(211, 142, 213)
+						BackgroundColor3 = Color3.fromRGB(127, 177, 112)
 					}):Play()
 				end
 				toggled = not toggled
@@ -265,7 +261,7 @@ function new(verification, key, info)
 			Slider.Parent = Tab
 			Slider.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 			Slider.BorderSizePixel = 0
-			Slider.Size = UDim2.new(0, 301, 0, 30)
+			Slider.Size = UDim2.new(1, 0, 0, 30)
 			Slider.AutoButtonColor = false
 			Slider.Font = Enum.Font.Arial
 			Slider.Text = ""
@@ -320,7 +316,7 @@ function new(verification, key, info)
 			Keybind.Parent = Tab
 			Keybind.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 			Keybind.BorderSizePixel = 0
-			Keybind.Size = UDim2.new(0, 301, 0, 30)
+			Keybind.Size = UDim2.new(1, 0, 0, 30)
 			Keybind.AutoButtonColor = false
 			Keybind.Font = Enum.Font.Arial
 			Keybind.Text = key
@@ -388,7 +384,7 @@ function new(verification, key, info)
 			Dropdown.Parent = Tab
 			Dropdown.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 			Dropdown.BorderSizePixel = 0
-			Dropdown.Size = UDim2.new(0, 301, 0, 30)
+			Dropdown.Size = UDim2.new(1, 0, 0, 30)
 			Dropdown.AutoButtonColor = false
 			Dropdown.Font = Enum.Font.Arial
 			Dropdown.Text = key
@@ -417,7 +413,7 @@ function new(verification, key, info)
 			DropFrame.BackgroundColor3 = Color3.fromRGB(41, 41, 41)
 			DropFrame.BorderSizePixel = 0
 			DropFrame.Position = UDim2.new(0, 0, 0.409937888, 0)
-			DropFrame.Size = UDim2.new(0, 300, 0, 29)
+			DropFrame.Size = UDim2.new(1, 0, 0, 29)
 			DropFrame.Visible = false
 			DropFrame.AutomaticSize = Enum.AutomaticSize.Y
 
@@ -472,7 +468,7 @@ function new(verification, key, info)
 					DropButton.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
 					DropButton.BorderSizePixel = 0
 					DropButton.Position = UDim2.new(0.0283333343, 0, 0, 0)
-					DropButton.Size = UDim2.new(0, 289, 0, 32)
+					DropButton.Size = UDim2.new(0, 300, 0, 32)
 					DropButton.AutoButtonColor = false
 					DropButton.Font = Enum.Font.Arial
 					DropButton.Text = v
