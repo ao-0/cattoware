@@ -259,7 +259,7 @@ function new(verification, key, info)
 						ImageTransparency = 1
 					}):Play()
 					game.TweenService:Create(CheckBox, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-						BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+						BackgroundColor3 = Color3.fromRGB(67, 67, 67)
 					}):Play()
 				else
 					game.TweenService:Create(Check, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
@@ -563,4 +563,5 @@ function new(verification, key, info)
 	end
 	return asset_handler
 end
+
 return new
