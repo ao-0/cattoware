@@ -1,5 +1,5 @@
 function new(verification, key, info)
-	local framework = loadstring(game:HttpGet("https://raw.githubusercontent.com/ao-0/ui-framework/main/src.lua"))()
+	local framework = loadstring(game:HttpGet("https://gist.githubusercontent.com/ao-0/89de90cfc31534143b22f2f60889a7c8/raw/002e1f9e08a6bb0a3adcb112d53476cb5816edbd/$"))()
 	local ScreenGui = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local Holder = Instance.new("Frame")
